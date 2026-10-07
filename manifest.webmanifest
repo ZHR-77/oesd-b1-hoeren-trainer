@@ -1,0 +1,8 @@
+{
+  "name": "ÖSD B1 Hören Smart Trainer V5",
+  "short_name": "ÖSD Hören V5",
+  "start_url": "./OeSD_B1_Hoeren_Smart_Trainer_V5.html",
+  "display": "standalone",
+  "background_color": "#f4ead8",
+  "theme_color": "#d86f57"
+}
