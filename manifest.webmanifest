@@ -1,9 +1,9 @@
 {
-  "name": "ÖSD B1 Hören Smart Trainer V11",
-  "short_name": "ÖSD Hören V11",
+  "name": "ÖSD B1 Hören Smart Trainer V12",
+  "short_name": "ÖSD Hören V12",
   "start_url": "/oesd-b1-hoeren-trainer/",
   "scope": "/oesd-b1-hoeren-trainer/",
   "display": "standalone",
-  "background_color": "#f4ead8",
-  "theme_color": "#d86f57"
+  "background_color": "#f7faf7",
+  "theme_color": "#58cc02"
 }

@@ -1,8 +1,9 @@
-const CACHE_NAME = 'oesd-v11';
+const CACHE_NAME = 'oesd-v12';
 const APP_SHELL = [
   './',
   './index.html',
   './v11.css',
+  './v12.css',
   './OeSD_B1_Hoeren_Master_Bank_V5.json',
   './manifest.webmanifest'
 ];
