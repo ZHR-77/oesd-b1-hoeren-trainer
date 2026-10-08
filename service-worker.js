@@ -1,4 +1,4 @@
-const CACHE_NAME = 'oesd-v12';
+const CACHE_NAME = 'oesd-v12.1';
 const APP_SHELL = [
   './',
   './index.html',

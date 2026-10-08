@@ -179,3 +179,25 @@ th, td { border-bottom-color: var(--play-line); }
   .card { border-radius: 19px; }
   .v10-dock { border-radius: 22px; }
 }
+
+/* Final V12 priority layer: overrides the legacy inline theme. */
+html body { color: var(--play-ink); background: var(--play-bg); }
+html body .side { border-right: 2px solid var(--play-line); background: #fff; box-shadow: none; }
+html body .brand h1 { color: var(--play-ink); }
+html body .brand small, html body .sidefoot { color: #999; }
+html body .nav { color: #777; border: 2px solid transparent; background: transparent; box-shadow: none; }
+html body .nav.active { color: #1899d6; border-color: #84d8ff; background: #ddf4ff; box-shadow: none; }
+html body .panel, html body .card { border: 2px solid var(--play-line); background: #fff; box-shadow: 0 4px 0 #e5e5e5; }
+html body .v10-hero { color: #fff; border: 0; background: linear-gradient(135deg,#58cc02,#48b700 58%,#2da900); box-shadow: 0 7px 0 #399b00; }
+html body .v10-hero h2 { color: #fff; }
+html body .v10-hero h2 .bi, html body .v10-hero p { color: #efffe3; }
+html body .v10-hero .primary { color: #1899d6; border-color: #b6e4f9; background: #fff; box-shadow: 0 5px 0 #b6e4f9; }
+html body .v10-hero .btn:not(.primary) { color: #fff; border-color: rgba(255,255,255,.58); background: rgba(255,255,255,.15); box-shadow: 0 4px 0 rgba(33,116,0,.55); }
+html body .v10-chip { color: var(--play-ink); border: 0; background: #fff; box-shadow: 0 4px 0 rgba(42,130,0,.45); }
+html body .btn { border-width: 2px; }
+html body .primary { color: #fff; border-color: var(--play-green-dark); background: var(--play-green); box-shadow: 0 5px 0 var(--play-green-dark); }
+html body .training-banner { background: linear-gradient(135deg,#d7ffb8,#e9ffd8 54%,#ddf4ff); }
+html body .mode-card { border: 2px solid var(--play-line)!important; background: #fff!important; box-shadow: 0 4px 0 #e5e5e5!important; }
+html body .v10-topbar { border-bottom: 2px solid var(--play-line); background: rgba(255,255,255,.96); }
+html body .v10-dock { border: 2px solid var(--play-line); background: rgba(255,255,255,.97); box-shadow: 0 5px 0 #ddd,0 15px 38px rgba(0,0,0,.13); }
+html body .v10-dock-btn.active { color: var(--play-green-dark); background: #eaffda; box-shadow: inset 0 0 0 2px #b8ed91; }
