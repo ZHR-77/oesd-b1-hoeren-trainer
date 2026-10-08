@@ -1,9 +1,10 @@
-const CACHE_NAME = 'oesd-v13.0';
+const CACHE_NAME = 'oesd-v13.1';
 const APP_SHELL = [
   './',
   './index.html',
   './v11.css',
-  './v12.css?v=13.0',
+  './v12.css?v=13.1',
+  './v13-splash.png',
   './app-logo-man.png',
   './app-icon-192.png',
   './app-icon-512.png',
