@@ -1,1 +1,54 @@
-const C='oesd-v5';const A=['./OeSD_B1_Hoeren_Smart_Trainer_V5.html','./OeSD_B1_Hoeren_Master_Bank_V5.json'];self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(A))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
+const CACHE_NAME = 'oesd-v5.1';
+const APP_SHELL = [
+  './',
+  './index.html',
+  './OeSD_B1_Hoeren_Master_Bank_V5.json',
+  './manifest.webmanifest'
+];
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(APP_SHELL))
+      .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys()
+      .then(keys => Promise.all(
+        keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+      ))
+      .then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener('fetch', event => {
+  const request = event.request;
+  if (request.method !== 'GET') return;
+
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then(response => {
+          if (response.ok) return response;
+          return caches.match('./index.html').then(fallback => fallback || response);
+        })
+        .catch(() => caches.match('./index.html'))
+    );
+    return;
+  }
+
+  if (new URL(request.url).origin === self.location.origin) {
+    event.respondWith(
+      caches.match(request).then(cached => cached || fetch(request).then(response => {
+        if (response.ok) {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
+        }
+        return response;
+      }))
+    );
+  }
+});
