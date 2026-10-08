@@ -2,7 +2,7 @@
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="ÖSD Hören V13"><meta name="mobile-web-app-capable" content="yes">
 <title>ÖSD B1 Hören Smart Trainer V13 Ultimate</title>
 <link rel="stylesheet" href="v11.css">
-<link rel="stylesheet" href="v12.css?v=13.0">
+<link rel="stylesheet" href="v12.css?v=13.1">
 <link rel="icon" type="image/png" href="app-icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
@@ -129,6 +129,8 @@ function applyV13Branding(){
 }
 mergeLearningHub();v10PolishStats();applyV13Branding();
 </script>
+<div id="v13Splash" class="v13-splash" role="status" aria-label="ÖSD B1 Trainer startet" onclick="dismissV13Splash()"><img src="v13-splash.png" alt="ZBI LA JBTI B1"><div class="v13-splash-loader"><i></i></div></div>
+<script>function dismissV13Splash(){const s=document.getElementById('v13Splash');if(!s||s.classList.contains('hide'))return;s.classList.add('hide');setTimeout(()=>s.remove(),650)}window.addEventListener('load',()=>setTimeout(dismissV13Splash,2400));</script>
 <div class="v10-dock" role="navigation" aria-label="App navigation"><button class="dock-btn active" data-mobile-view="dashboard" onclick="v10MobileNav('dashboard')"><i>⌂</i><span>Home</span></button><button class="dock-btn" data-mobile-view="journey" onclick="v10MobileNav('journey')"><i>◆</i><span>Lernweg</span></button><button class="dock-btn" data-mobile-view="training" onclick="v10MobileNav('training')"><i>▶</i><span>Lernen</span></button><button class="dock-btn" data-mobile-view="library" onclick="v10MobileNav('library')"><i>▤</i><span>Bibliothek</span></button><button class="dock-btn" onclick="v10More(true)"><i>•••</i><span>Mehr</span></button></div>
 <div class="v10-more-sheet" id="v10MoreSheet" onclick="if(event.target===this)v10More(false)"><div class="v10-more-panel"><div class="v10-grabber"></div><div class="v10-more-head"><h3>Mehr · المزيد</h3><button class="v10-close" onclick="v10More(false)">✕</button></div><div class="v10-menu-grid"><button class="v10-menu-btn" onclick="v10MoreGo('library')"><i>▤</i>Bibliothek<br>المكتبة</button><button class="v10-menu-btn" onclick="v10MoreGo('analytics')"><i>◫</i>Analytics<br>الإحصائيات</button><button class="v10-menu-btn" onclick="v10MoreGo('history')"><i>◷</i>Prüfungen<br>الامتحانات</button><button class="v10-menu-btn" onclick="v10MoreGo('bank')"><i>▦</i>Bank<br>الأسئلة</button><button class="v10-menu-btn" onclick="v10MoreGo('progress')"><i>↗</i>Backup<br>التقدم</button><button class="v10-menu-btn" onclick="v10MoreGo('settings')"><i>⚙</i>Settings<br>الإعدادات</button></div></div></div>
 </body></html>
